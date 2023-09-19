@@ -16,7 +16,8 @@ public class OnlineShop extends Shop implements Online, Tracking{
 
     @Override
     public String tracking(UUID idOrder) {
+        int countOperation = 4;
         return List.of("Сборка", "Обработка", "Доставка", "Готово")
-                .get(new Random().nextInt(4));
+                .get(new Random().nextInt(countOperation));
     }
 }
